@@ -3,111 +3,251 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>C.H Abbruchunternehmen</title>
 
 <style>
-body{
-font-family: Arial, sans-serif;
+
+*{
 margin:0;
 padding:0;
-background:#f4f4f4;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+line-height:1.6;
 }
 
 header{
-background:#222;
-color:white;
+height:100vh;
+background:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-padding:40px 20px;
+position:relative;
 }
 
-header h1{
-margin:0;
-font-size:36px;
+header::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.75);
 }
 
-header p{
-font-size:18px;
+.hero{
+position:relative;
+z-index:2;
+max-width:800px;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+color:#d4a017;
+}
+
+.hero p{
+font-size:24px;
+margin:20px 0;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+background:#d4a017;
+color:white;
+text-decoration:none;
+font-weight:bold;
+border-radius:5px;
 }
 
 section{
-padding:25px;
-background:white;
-margin:15px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
 }
 
 h2{
-color:#d35400;
+text-align:center;
+font-size:40px;
+margin-bottom:40px;
+color:#d4a017;
 }
 
-.button{
-display:inline-block;
-background:#25D366;
-color:white;
-padding:12px 20px;
-text-decoration:none;
-border-radius:5px;
-font-weight:bold;
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1c1c1c;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 0 15px rgba(0,0,0,.4);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3{
+padding:15px;
+color:#d4a017;
+}
+
+.card p{
+padding:0 15px 20px;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:10px;
+}
+
+.contact{
+text-align:center;
+background:#1c1c1c;
+border-radius:10px;
+padding:40px;
+}
+
+.contact h3{
+font-size:32px;
+margin-bottom:20px;
+color:#d4a017;
 }
 
 footer{
-background:#222;
-color:white;
 text-align:center;
-padding:20px;
-margin-top:20px;
+padding:30px;
+background:black;
+margin-top:50px;
 }
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
+
+<div class="hero">
 <h1>C.H Abbruchunternehmen</h1>
-<p>Professionelle Abbrucharbeiten in Fürth und Umgebung</p>
+<p>Wir schaffen Platz für Neues</p>
+
+<a href="tel:+491796949747" class="btn">
+📞 0179 6949747
+</a>
+
+</div>
+
 </header>
 
 <section>
+
 <h2>Unsere Leistungen</h2>
 
-<ul>
-<li>Abbrucharbeiten</li>
-<li>Entrümpelungen</li>
-<li>Entkernung</li>
-<li>Bauschuttentsorgung</li>
-<li>Renovierungsvorbereitung</li>
-</ul>
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd">
+<h3>Abbrucharbeiten</h3>
+<p>Professioneller Rückbau von Gebäuden und Anlagen.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952">
+<h3>Entrümpelungen</h3>
+<p>Schnelle und saubere Räumungen jeder Größe.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581092919535-7146ff1a590e">
+<h3>Entkernung</h3>
+<p>Fachgerechte Entkernung von Häusern und Gewerbeobjekten.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+<h3>Bauschuttentsorgung</h3>
+<p>Umweltgerechte Entsorgung aller Materialien.</p>
+</div>
+
+</div>
+
 </section>
 
 <section>
+
 <h2>Warum wir?</h2>
 
-<p>
-✔ Zuverlässig<br>
-✔ Saubere Arbeit<br>
-✔ Faire Preise<br>
-✔ Schnelle Terminvergabe
-</p>
+<div class="about">
+
+<div>
+<h3>✔ Zuverlässig</h3>
+<h3>✔ Faire Preise</h3>
+<h3>✔ Saubere Arbeit</h3>
+<h3>✔ Schnelle Termine</h3>
+<h3>✔ Professionelle Ausführung</h3>
+</div>
+
+<img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5">
+
+</div>
+
 </section>
 
 <section>
+
 <h2>Kontakt</h2>
 
-<p>
-Königstraße 100<br>
-90762 Fürth
-</p>
+<div class="contact">
 
-<p>
-E-Mail:<br>
-chbauunternehmen27@gmail.com
-</p>
+<h3>C.H Abbruchunternehmen</h3>
 
-<a class="button" href="mailto:chbauunternehmen27@gmail.com">
-Jetzt anfragen
+<p>Königstraße 100<br>90762 Fürth</p>
+
+<br>
+
+<p>📧 chbauunternehmen27@gmail.com</p>
+
+<p>📞 0179 6949747</p>
+
+<br>
+
+<a href="tel:+491796949747" class="btn">
+Jetzt anrufen
 </a>
+
+</div>
 
 </section>
 
